@@ -17,6 +17,6 @@ You can open `index.html` directly in a browser, but **images may not load** due
   2. Right-click `index.html` → **Open with Live Server**.
 
 - **Option 2: Visit the Hosted Link**
-  - [Hosted Website Link](#) ← _Replace with your deployed link_
+  - https://solar-system-nine-mu.vercel.app/(#) 
 
 ---
