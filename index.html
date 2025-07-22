@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realistic 3D Solar System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loader">Loading Solar System... 0%</div>
+    <div id="title">Advanced Solar System Simulator</div>
+    <div id="tooltip"></div>
+    
+    <div id="controls-container">
+        <div class="control-section">
+            <div class="control-group">
+                <div class="control-row">
+                    <button id="pauseResume" class="btn-primary">Pause</button>
+                    <button id="resetView">Reset View</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="control-section">
+            <h4>View Options</h4>
+            <div class="control-group">
+                <div class="view-options-grid">
+                    <button id="themeToggle">Light Mode</button>
+                    <button id="starsToggle" class="btn-success">Stars</button>
+                    <button id="orbitsToggle" class="btn-success">Orbits</button>
+                    <button id="labelsToggle" class="btn-success">Labels</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="control-section">
+            <h4>Camera Controls</h4>
+            <div class="control-group">
+                <label>Camera Speed</label>
+                <input type="range" id="cameraSpeed" min="0.1" max="3" step="0.1" value="1">
+            </div>
+            <div class="control-group">
+                <button id="followPlanet">Follow Mode</button>
+                <select id="planetSelect">
+                    <option value="">Select Planet</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="control-section">
+            <h4>System Controls</h4>
+            <div class="control-group">
+                <label>Time Speed</label>
+                <input type="range" id="timeSpeed" min="0.1" max="10" step="0.1" value="1">
+            </div>
+            <div class="control-group">
+                <label>Planet Size</label>
+                <input type="range" id="planetScale" min="0.5" max="3" step="0.1" value="1">
+            </div>
+        </div>
+
+        <div class="control-section">
+            <h4>Planet Speeds</h4>
+            <div id="speed-controls"></div>
+        </div>
+    </div>
+
+    <div id="info-panel">
+        <div class="planet-info">
+            <h3 id="selectedPlanetName">Solar System</h3>
+            <p id="planetDistance">Hover over a planet for details</p>
+            <p id="planetSize"></p>
+            <p id="planetTemp"></p>
+            <p id="planetMoons"></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
